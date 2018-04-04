@@ -3876,6 +3876,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						name="CIA"
 						description="UAV and Intelligence";
 						isPlayable=1;
 					};

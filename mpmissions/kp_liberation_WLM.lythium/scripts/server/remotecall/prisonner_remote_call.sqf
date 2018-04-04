@@ -13,3 +13,6 @@ if (isServer) then {
 
 	[0] remoteExec ["remote_call_intel"];
 };
+
+if (isPlayer CIA || commandant) then {
+};
