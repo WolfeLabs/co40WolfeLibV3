@@ -40,6 +40,20 @@ waitUntil { sleep 5;
 
 if (alive _unit) then {
 
+	if (isPlayer CIA || commandant) then {
+			sleep 5;
+		_grp = createGroup GRLIB_side_friendly;
+		[_unit] joinSilent _grp;
+		_unit playmove "AmovPercMstpSnonWnonDnon_AmovPsitMstpSnonWnonDnon_ground";
+		_unit disableAI "ANIM";
+		_unit disableAI "MOVE";
+		sleep 5;
+		[_unit, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExec ["remote_call_switchmove"];
+		[_unit,1] remoteExec ["prisonner_remote_call",2];
+		sleep 300;
+		deleteVehicle _unit;
+	};
+	
 	if ( _is_near_fob ) then {
 
 		sleep 5;
@@ -50,7 +64,7 @@ if (alive _unit) then {
 		_unit disableAI "MOVE";
 		sleep 5;
 		[_unit, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExec ["remote_call_switchmove"];
-		[_unit] remoteExec ["prisonner_remote_call",2];
+		[_unit,0] remoteExec ["prisonner_remote_call",2];
 		sleep 600;
 		deleteVehicle _unit;
 
