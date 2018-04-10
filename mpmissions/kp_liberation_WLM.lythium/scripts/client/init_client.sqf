@@ -74,3 +74,6 @@ player addEventHandler ["GetInMan", {[_this select 2] spawn kp_cr_checkVehicle;}
 [] execVM "onPlayerRespawn.sqf";
 
 [player] joinSilent (createGroup GRLIB_side_friendly);
+
+/* WolfLabs Edits*/
+[] spawn compileFinal preprocessFileLineNumbers "scripts\client\roles\enforce_roles.sqf";

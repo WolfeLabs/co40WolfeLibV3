@@ -2723,7 +2723,7 @@
 			<Portuguese>Desculpe!</Portuguese>
 		</Key>
 		<Key ID="STR_COMMANDER_NOT_AUTHORIZED">
-			<Original>You are not authorized to use the commander slot on this server.</Original>
+			<Original>You are not authorized to use this slot on this server.</Original>
 			<French>Vous n'êtes pas authorizé à utiliser la place de commandant sur ce serveur.</French>
 			<German>Du bist auf diesem Server nicht als Kommandant autorisiert.</German>
 			<Spanish>No estás autorizado para usar el slot de comandante en este servidor.</Spanish>

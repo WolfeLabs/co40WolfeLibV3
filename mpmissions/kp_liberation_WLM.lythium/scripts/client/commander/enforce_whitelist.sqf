@@ -10,7 +10,7 @@ sleep 1;
 _commanderobj = [] call F_getCommander;
 if ( !isNull _commanderobj ) then {
 	if ( player == _commanderobj && !([] call F_isAdmin)) then {
-
+/*
 		_tagmatch = false;
 		_idmatch = false;
 		_namematch = false;
@@ -41,6 +41,6 @@ if ( !isNull _commanderobj ) then {
 			if ( alive _commanderobj ) then {
 				endMission "END1";
 			};
-		};
+		};*/
 	};
 };
