@@ -1,6 +1,15 @@
-#include "../../WolfLabs/macros.hpp"
+#include "..\..\..\WolfLabs\DB\macros.hpp"
 
-private ["_idMatch", "_query", "_result", "_target", "_playerType", "_uid", "_isAdm","_isMed", "_isEng", "isInt","_isPie","_isSnipe"];
+/*
+	File : enforce_roles.sqf
+
+	Enforces the Whitelisted Roles from the DB.
+
+	Authors : WolfLabs
+	
+*/
+
+private ["_idmatch", "_query", "_result", "_ignoreTypes", "_target", "_playerType", "_uid"];
 
 waitUntil { alive player } ;
 sleep 1;
@@ -8,17 +17,18 @@ sleep 1;
 _target = player;
 _playerType = typeOf _target;
 _uid = getPlayerUID _target;
-
-_ignoreTypes[] = {"B_Soldier_F", "B_soldier_exp_F", "B_Soldier_TL_F", "B_Soldier_SL_F", "B_officer_F"};
+_ignoreTypes = [ "B_Soldier_F", "B_soldier_exp_F", "B_Soldier_TL_F", "B_Soldier_SL_F", "B_officer_F"];
 
 if (!isNull _target ) then {
 	if (([] call BIS_fnc_admin) != 1) then {
 		_query = format ["SELECT * FROM players WHERE uid='%1'",_uid];
-			_result = [_query,2] call DB_fnc_asyncCall;
+			_result = [_query, 2] call DB_fnc_asyncCall;
 
 			_idmatch = false;
 
 		/* FINNA MAKE NOT FOUND*/
+		waitUntil {alive player};
+		systemChat _result;
 		
 		if ((_result select 3) isEqualTo 1) then  { //Admin - No Checks for you.
 			_idmatch = true;

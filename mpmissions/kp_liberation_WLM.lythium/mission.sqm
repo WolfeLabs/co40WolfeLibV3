@@ -37790,7 +37790,7 @@ class Mission
 			{
 				health=0.79999995;
 				skill=0.60000002;
-				init="this enableSimulation false;this allowDamage false;this setObjectTexture [0, ""shtimed.jpg""] ;";
+				init="this enableSimulation false;this allowDamage false;";
 			};
 			id=3670;
 			type="SignAd_Sponsor_F";
@@ -40277,7 +40277,7 @@ class Mission
 			{
 				health=0.79999995;
 				skill=0.60000002;
-				init="this enableSimulation false;this allowDamage false;this setObjectTexture [0, ""shtimed.jpg""] ;";
+				init="this enableSimulation false;this allowDamage false;";
 			};
 			id=3795;
 			type="SignAd_Sponsor_F";
@@ -46181,7 +46181,7 @@ class Mission
 			{
 				health=0.79999995;
 				skill=0.60000002;
-				init="this enableSimulation false;this allowDamage false;this setObjectTexture [0, ""shtimed.jpg""] ;";
+				init="this enableSimulation false;this allowDamage false;";
 			};
 			id=4018;
 			type="SignAd_Sponsor_F";
@@ -48668,7 +48668,7 @@ class Mission
 			{
 				health=0.79999995;
 				skill=0.60000002;
-				init="this enableSimulation false;this allowDamage false;this setObjectTexture [0, ""shtimed.jpg""] ;";
+				init="this enableSimulation false;this allowDamage false;";
 			};
 			id=4143;
 			type="SignAd_Sponsor_F";

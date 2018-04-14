@@ -20,19 +20,19 @@ params [
 	["_arraymode", true , [false]]
 ];
 
-_result = EXTDB format ["%1:%2:%3", _mode,FETCH_CONST(WL_sql_id),_query];
+_result = CALL_EXTDB format ["%1:%2:%3", _mode, FETCH_CONST(WL_sql_id), _query];
 
 	if (_mode isEqualTo 1) exitWith {true};
 
 	_ret = call compile format ["%1", _result];
 		_ret = (_ret select 1);
-			_result = EXTDB format ["4:%1", _ret];
+			_result = CALL_EXTDB format ["4:%1", _ret];
 
 	//Send data
 	if (_result isEqualTo "[3]") then {
 		for "_i" from 0 to 1 step 0 do {
 			if (!(_result isEqualTo "[3]")) exitWith {};
-				_result = EXTDB format ["4:%1", _ret];
+				_result = CALL_EXTDB format ["4:%1", _ret];
 		};
 	};
 
@@ -41,7 +41,7 @@ _result = EXTDB format ["%1:%2:%3", _mode,FETCH_CONST(WL_sql_id),_query];
 		for "_i" from 0 to 1 step do {
 			_result = "";
 				for "_i" from 0 to 1 step 0 do {
-					_pipe = EXTDB format ["5:%1", _ret];
+					_pipe = CALL_EXTDB format ["5:%1", _ret];
 						if (_pipe isEqualTo "") exitWith {_loop = false;}
 							_result = _result + _pipe;
 				};
