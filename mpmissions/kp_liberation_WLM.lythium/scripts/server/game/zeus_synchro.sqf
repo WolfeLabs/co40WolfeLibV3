@@ -55,5 +55,11 @@ while { true } do {
 
 	} foreach allCurators;
 
+		zm1_2  setCuratorCoef ["edit", 100];
+		zm1_2  setCuratorCoef ["place", 100];
+		zm1_2  setCuratorCoef ["synchronize", 100];
+		zm1_2  setCuratorCoef ["delete", 100];
+		zm1_2  setCuratorCoef ["destroy", 100];
+
 	sleep 10;
 };
