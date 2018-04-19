@@ -105,7 +105,8 @@ light_vehicles = [
 	["B_Boat_Transport_01_F",100,0,25],									//Assault Boat
 	["B_Boat_Armed_01_minigun_F",200,80,75],							//Speedboat Minigun
 	["rhsusf_mkvsoc",250,200,100],										//Mk.V SOCOM
-	["B_SDV_01_F",150,0,50]												//SDV
+	["B_SDV_01_F",150,0,50],											//SDV
+	["B_AFV_Wheeled_01_up_cannon_F",300,300,300]						//RINO Tanks DLC
 ];
 
 heavy_vehicles = [
